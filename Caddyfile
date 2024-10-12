@@ -6,6 +6,6 @@ mimi.shivalry.dev {
 
 }
 
-shivalry.dev {
+shivalry.dev:443 {
     reverse_proxy mimi-web: 3000
 }
