@@ -1,6 +1,6 @@
 version: '3'
 networks:
-  caddy:
+  mimi-net:
 services:
   mimi-api:
     container_name: mimi-api
@@ -10,9 +10,17 @@ services:
     build:
       context: ./
     networks:
-      - caddy
+      - mimi-net
     ports:
       - 4000:4000
+  mimi-web:
+    build: ../mimi-web
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    networks:
+      - mimi-net
 
   caddy:
     image: caddy:latest
@@ -27,7 +35,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - caddy
+      - mimi-net
 
 volumes:
   caddy_data:

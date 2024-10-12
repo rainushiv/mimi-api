@@ -3,4 +3,10 @@ mimi.shivalry.dev {
         header_down Strict-Transport-Security max-age=31536000;
     }
 
+
+}
+
+shivalry.dev {
+
+    reverse_proxy mimi-web: 80
 }
