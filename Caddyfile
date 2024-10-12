@@ -1,4 +1,4 @@
-shivalry.dev {
+mimi.shivalry.dev {
     reverse_proxy mimi-api:4000 {
         header_down Strict-Transport-Security max-age=31536000;
     }
