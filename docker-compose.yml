@@ -1,4 +1,6 @@
 version: '3'
+networks:
+  caddy:
 services:
   mimi-api:
     container_name: mimi-api
@@ -7,6 +9,8 @@ services:
       - NODE_ENV=production
     build:
       context: ./
+      network:
+        - caddy
     ports:
       - 4000:4000
 
@@ -22,7 +26,10 @@ services:
       - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
+    networks:
+      - caddy
 
 volumes:
   caddy_data:
+    external: true
   caddy_config:
