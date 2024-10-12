@@ -1,15 +1,11 @@
-shivalry.dev:443 {
-    tls shivrainu@proton.me root * /build route {
-        reverse_proxy /api* mimi-api:4000 try_files {
-            path
-        }
-
-            {
-            path
-        }
-
-        / /index.html file_server
+mimi.shivalry.dev {
+    reverse_proxy mimi-api:4000 {
+        header_down Strict-Transport-Security max-age=31536000;
     }
 
-    file_server
+
+}
+
+shivalry.dev {
+    reverse_proxy mimi-web: 3000
 }
