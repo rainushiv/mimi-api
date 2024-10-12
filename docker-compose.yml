@@ -36,9 +36,11 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      mimi-net:
-        driver: bridge
+      - mimi-net
 
+networks:
+  mimi-net:
+    driver: bridge
 volumes:
   caddy_data:
   caddy_config:
