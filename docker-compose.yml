@@ -1,0 +1,28 @@
+version: '3'
+services:
+  mimi-api:
+    container_name: mimi-api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    build:
+      context: ./
+    ports:
+      - 4000:4000
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy-service
+    restart: unless-stopped
+    port:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/site:/srv
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

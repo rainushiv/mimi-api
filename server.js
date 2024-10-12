@@ -57,7 +57,7 @@ app.use((req, res, next) => {
 })
 
 mongoose.connect(
-    process.env.MONGODB_DATABASE_KEY
+    process.env.MONGODB_DATABASE_KEY || "guest"
 ).then(() => {
     app.listen(4000, () => { console.log('app is running on localhost 4000') });
 }).catch(err => {
