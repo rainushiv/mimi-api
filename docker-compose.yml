@@ -41,4 +41,6 @@ services:
 
 volumes:
   caddy_data:
+    driver: local
   caddy_config:
+    driver: local
