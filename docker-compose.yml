@@ -17,6 +17,8 @@ services:
   mimi-web:
     container_name: mimi-web
     build: ../mimi-web
+    args:
+      - MIMI_API_KEY=mimi.shivalry.dev
     stdin_open: true
     restart: unless-stopped
     ports:
