@@ -1,6 +1,7 @@
 version: '3'
 networks:
   mimi-net:
+    driver: bridge
 services:
   mimi-api:
     container_name: mimi-api
@@ -38,9 +39,6 @@ services:
     networks:
       - mimi-net
 
-networks:
-  mimi-net:
-    driver: bridge
 volumes:
   caddy_data:
   caddy_config:
