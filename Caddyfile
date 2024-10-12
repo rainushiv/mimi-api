@@ -7,6 +7,5 @@ mimi.shivalry.dev {
 }
 
 shivalry.dev {
-
     reverse_proxy mimi-web: 3000
 }
