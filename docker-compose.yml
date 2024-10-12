@@ -19,7 +19,8 @@ services:
     stdin_open: true
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "80:80"
+      - "443:443"
     networks:
       - mimi-net
 
