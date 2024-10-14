@@ -25,6 +25,7 @@ const getAllLostCats = async (req, res, next) => {
         const error = new HttpError('Something went wrong', 500)
         return next(error);
     }
+    res.set('Access-Control-Allow-Origin', 'http://shivalry.dev')
     res.json({ lostCats: lostCats.map(lostCat => lostCat.toObject({ getters: true })) });
 
     CatLogger.info('Get all cat request')
