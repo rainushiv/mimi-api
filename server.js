@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use('/uploads/images', express.static(path.join('uploads', 'images')));
 app.use(express.static('images'));
 var corsOptions = {
-    origin: 'http://localhost:8080',
+    origin: 'http://mimi.shivalry.dev',
     optionsSuccessStatus: 200 // For legacy browser support
 }
 
