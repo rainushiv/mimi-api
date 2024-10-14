@@ -12,9 +12,15 @@ require("dotenv").config();
 app.use(bodyParser.json())
 app.use('/uploads/images', express.static(path.join('uploads', 'images')));
 app.use(express.static('images'));
+var corsOptions = {
+    origin: 'http://localhost:8080',
+    optionsSuccessStatus: 200 // For legacy browser support
+}
+
+app.use(cors(corsOptions));
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://shivalry.dev');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
         'Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, Authorization'
