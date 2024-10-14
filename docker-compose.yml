@@ -19,7 +19,7 @@ services:
     build:
       context: ../mimi-web
       args:
-        - MIMI_API_KEY=https://mimi.shivalry.dev
+        - API_KEY=https://mimi.shivalry.dev
     stdin_open: true
     restart: unless-stopped
     ports:
