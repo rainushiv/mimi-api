@@ -19,7 +19,7 @@ services:
     build:
       context: ../mimi-web
       args:
-        REACT_APP_API_URL: "https://mimi.shivalry.dev"
+        API_URL: "https://mimi.shivalry.dev"
     stdin_open: true
     restart: unless-stopped
     ports:
