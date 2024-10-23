@@ -18,13 +18,15 @@ services:
     container_name: mimi-web
     build:
       context: ../mimi-web
+      args:
+        REACT_APP_API_URL: "https://mimi.shivalry.dev"
     stdin_open: true
     restart: unless-stopped
     ports:
       - "3000:3000"
+
     networks:
       - mimi-net
-
   caddy:
     image: caddy:latest
     restart: unless-stopped
