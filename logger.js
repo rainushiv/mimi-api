@@ -22,19 +22,7 @@ winston.loggers.add('UserLogger', {
     ],
 })
 
-winston.loggers.add('CatLogger', {
-    level: 'info',
-    format: combine(
-        errors({ stack: true }),
-        timestamp(),
-        json(),
-        prettyPrint()
-    ),
 
-    transports: [new winston.transports.Console(),
-    new winston.transports.File({ filename: path.join(logdir, 'catLog.log') }),
-    ],
-})
 
 
 
