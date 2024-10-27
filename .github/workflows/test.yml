@@ -34,7 +34,7 @@ jobs:
     deploy:
       runs-on: ubuntu/latest 
 
-    steps:
+      steps:
       - name: Deploy
         uses: appleboy/ssh-action@v1.1.0
         with:
