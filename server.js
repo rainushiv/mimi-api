@@ -16,7 +16,7 @@ app.use(express.static('images'));
 
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', process.env.WEB_URL);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
         'Access-Control-Allow-Headers',
         'Origin, X-Requested-With, Content-Type, Accept, Authorization'

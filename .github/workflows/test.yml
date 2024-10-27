@@ -30,5 +30,3 @@ jobs:
             
       - name: tells whether it succeeded 
         run: echo "this workflows works"
-      - name: start build
-        run: npm start 
