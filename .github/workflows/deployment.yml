@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd ~/var/www/mimi-service/mimi-api
+            cd ~//var/www/mimi-service/mimi-api
             git pull 
             cd ..
             cd mimi-service
