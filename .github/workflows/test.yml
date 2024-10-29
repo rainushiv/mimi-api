@@ -38,13 +38,13 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@v1.1.0
         with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd ~/var/www/mimi-service/mimi-api
-          git pull 
-          cd ..
-          cd mimi-service
-          docker compose up -d --build
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd ~/var/www/mimi-service/mimi-api
+            git pull 
+            cd ..
+            cd mimi-service
+            docker compose up -d --build
