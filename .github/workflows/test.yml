@@ -31,10 +31,10 @@ jobs:
       - name: tells whether it succeeded 
         run: echo "this workflows works"
 
-    deploy:
-      runs-on: ubuntu/latest 
+  deploy:
+    runs-on: ubuntu/latest 
 
-      steps:
+    steps:
       - name: Deploy
         uses: appleboy/ssh-action@v1.1.0
         with:
