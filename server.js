@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res, next) => {
 
-    res.json({ message: "fuck it we ball" })
+    res.json({ message: "I'm literally him" })
 });
 app.use('/api/lost', lostcatRoutes);
 app.use('/api/user', userroutes)
